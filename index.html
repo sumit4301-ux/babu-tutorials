@@ -1,0 +1,2558 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Coaching Institute</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+
+  /* Fully editable from Admin > Site Settings. These are just tasteful defaults. */
+
+  --primary:#5B3A9B;      /* headline / nav / buttons */
+
+  --primary-dark:#3E2770;
+
+  --secondary:#F2ECFB;    /* soft tint used for cards/sections */
+
+  --accent:#F2A65A;       /* highlights, badges, active states */
+
+  --bg:#FFFFFF;
+
+  --text:#241C33;
+
+  --muted:#6b6377;
+
+  --radius:16px;
+
+  --radius-sm:10px;
+
+  --shadow-sm:0 2px 8px rgba(36,28,51,0.06);
+
+  --shadow-md:0 8px 28px rgba(36,28,51,0.12);
+
+  --shadow-lg:0 20px 50px rgba(36,28,51,0.18);
+
+}
+
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{font-family:'Inter',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+
+h1,h2,h3,h4{font-family:'Poppins',sans-serif}
+
+a{text-decoration:none;color:inherit}
+
+img{max-width:100%;display:block}
+
+button{cursor:pointer;font-family:inherit}
+
+::selection{background:var(--accent);color:#fff}
+
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* ---------- HEADER ---------- */
+
+header{background:rgba(255,255,255,0.9);backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid rgba(36,28,51,0.08);position:sticky;top:0;z-index:200}
+
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;max-width:1180px;margin:0 auto}
+
+.brand{display:flex;align-items:center;gap:14px}
+
+.brand img{height:52px;width:52px;object-fit:contain;border-radius:12px;box-shadow:var(--shadow-sm)}
+
+.logo-placeholder{height:52px;width:52px;border-radius:12px;border:2px dashed var(--accent);display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;color:var(--primary);background:var(--secondary);font-size:1.1rem;flex-shrink:0}
+
+.brand-text{display:flex;flex-direction:column}
+
+.brand h1{font-size:1.7rem;font-weight:800;color:var(--primary);letter-spacing:-0.02em}
+
+.brand .tagline{font-size:0.8rem;color:var(--muted);font-weight:600;letter-spacing:0.04em;text-transform:uppercase}
+
+.hamburger{display:flex;flex-direction:column;gap:5px;background:var(--secondary);border:none;padding:12px;border-radius:10px;transition:.2s}
+
+.hamburger:hover{background:var(--accent)}
+
+.hamburger span{width:22px;height:2.5px;background:var(--primary);border-radius:2px;transition:.2s}
+
+nav{background:linear-gradient(180deg,var(--primary),var(--primary-dark));max-height:0;overflow:hidden;transition:max-height .35s ease}
+
+nav.open{max-height:2000px}
+
+.nav-list{list-style:none;display:flex;flex-direction:column;padding:6px 0}
+
+.nav-list>li{border-top:1px solid rgba(255,255,255,0.08)}
+
+.nav-list>li>a,.nav-list>li>.nav-label{display:flex;justify-content:space-between;align-items:center;padding:15px 24px;color:#fff;font-weight:600;cursor:pointer;font-size:0.98rem;transition:.15s}
+
+.nav-list>li>a:hover,.nav-list>li>.nav-label:hover{background:rgba(255,255,255,0.1);padding-left:30px}
+
+.dropdown{list-style:none;background:rgba(0,0,0,0.18);display:none}
+
+.dropdown.open{display:block}
+
+.dropdown li a{display:block;padding:13px 24px 13px 44px;color:#e8dcfb;font-size:0.92rem;transition:.15s}
+
+.dropdown li a:hover{background:rgba(255,255,255,0.08);color:var(--accent);padding-left:50px}
+
+/* ---------- HERO ---------- */
+
+.hero{position:relative;background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);color:#fff;padding:80px 24px 90px;text-align:center;overflow:hidden}
+
+.hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 20% 20%, rgba(255,255,255,0.12) 0%, transparent 45%),radial-gradient(circle at 85% 75%, rgba(255,255,255,0.10) 0%, transparent 40%)}
+
+.hero-inner{position:relative;max-width:680px;margin:0 auto}
+
+.hero h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:16px;font-weight:800;letter-spacing:-0.02em}
+
+.hero p{font-size:1.15rem;color:rgba(255,255,255,0.88);max-width:600px;margin:0 auto}
+
+/* ---------- FLASH CARDS ---------- */
+
+.flash-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;padding:0 24px;max-width:1180px;margin:-46px auto 50px;position:relative;z-index:5}
+
+.flash-card{background:#fff;border-radius:var(--radius);padding:28px 24px;box-shadow:var(--shadow-lg);text-align:center;transition:.25s;border:1px solid rgba(36,28,51,0.05)}
+
+.flash-card:hover{transform:translateY(-6px)}
+
+.flash-card .icon-badge{width:52px;height:52px;border-radius:50%;background:var(--secondary);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 14px}
+
+.flash-card .big{font-size:1.9rem;font-weight:800;color:var(--primary);font-family:'Poppins',sans-serif}
+
+.flash-card .label{margin-top:6px;color:var(--muted);font-weight:600;font-size:0.92rem}
+
+/* ---------- SECTIONS ---------- */
+
+.page-section{display:none;padding:50px 24px;max-width:1180px;margin:0 auto;animation:fadeIn .35s ease}
+
+.page-section.active{display:block}
+
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+.section-title{color:var(--primary);font-size:1.75rem;font-weight:800;margin-bottom:26px;letter-spacing:-0.01em;position:relative;padding-bottom:14px}
+
+.section-title::after{content:'';position:absolute;left:0;bottom:0;width:56px;height:4px;border-radius:4px;background:var(--accent)}
+
+.card{background:#fff;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow-sm);margin-bottom:16px;border:1px solid rgba(36,28,51,0.06);transition:.2s}
+
+.card:hover{box-shadow:var(--shadow-md)}
+
+.select-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+
+select,input[type=text],input[type=password],input[type=email],textarea{
+
+  padding:11px 14px;border:1.5px solid #e5e0ee;border-radius:var(--radius-sm);font-size:0.95rem;font-family:inherit;background:#fff;transition:.15s;color:var(--text)
+
+}
+
+select:focus,input:focus,textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(91,58,155,0.12)}
+
+.btn{background:var(--primary);color:#fff;border:none;padding:11px 20px;border-radius:var(--radius-sm);font-weight:600;transition:.18s;font-size:0.92rem}
+
+.btn:hover{background:var(--primary-dark);transform:translateY(-1px)}
+
+.btn-gold{background:var(--accent);color:#3a2308}
+
+.btn-gold:hover{background:#e0954a}
+
+.btn-danger{background:#e15353;color:#fff}
+
+.btn-danger:hover{background:#c8413f}
+
+.file-list{list-style:none}
+
+.file-list li{display:flex;justify-content:space-between;align-items:center;background:var(--secondary);border-radius:var(--radius-sm);padding:14px 18px;margin-bottom:10px;border:1px solid rgba(91,58,155,0.08);transition:.15s}
+
+.file-list li:hover{background:#eae1fa}
+
+.file-list a{color:var(--primary);font-weight:700}
+
+/* ---------- QUIZ ---------- */
+
+.quiz-q{background:#fff;border:1.5px solid #eee5fb;border-radius:var(--radius-sm);padding:18px;margin-bottom:14px;box-shadow:var(--shadow-sm)}
+
+.quiz-q strong{color:var(--primary-dark)}
+
+.quiz-q .opt{display:block;margin:8px 0;padding:10px 14px;border:1.5px solid #ece6fb;border-radius:8px;cursor:pointer;transition:.15s}
+
+.quiz-q .opt:hover{background:var(--secondary);border-color:var(--primary)}
+
+.quiz-q input{margin-right:10px}
+
+/* ---------- LEADERBOARD ---------- */
+
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--radius-sm);overflow:hidden;box-shadow:var(--shadow-sm)}
+
+th,td{padding:12px 16px;text-align:left;border-bottom:1px solid #f0ecfa}
+
+th{background:var(--primary);color:#fff;font-family:'Poppins',sans-serif;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.03em}
+
+tr:nth-child(even){background:#faf8fe}
+
+tr:hover{background:var(--secondary)}
+
+/* ---------- ABOUT / STORY CARDS ---------- */
+
+.about-block{display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start;margin-bottom:20px}
+
+.about-block img{width:240px;border-radius:var(--radius);box-shadow:var(--shadow-md)}
+
+.about-text{flex:1;min-width:240px}
+
+.about-text p{color:var(--text);font-size:1.02rem}
+
+.story-card,.edu-card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:20px;margin-bottom:18px;display:flex;gap:18px;flex-wrap:wrap;border:1px solid rgba(36,28,51,0.05);transition:.2s}
+
+.story-card:hover,.edu-card:hover{box-shadow:var(--shadow-md)}
+
+.story-card img,.edu-card img{width:150px;height:150px;object-fit:cover;border-radius:var(--radius-sm)}
+
+.edu-card blockquote{font-style:italic;color:var(--primary-dark);margin:8px 0;font-size:1.05rem}
+
+/* ---------- CONTACT ---------- */
+
+.contact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+
+/* ---------- CUSTOM PAGES ---------- */
+
+.custom-page-hero{color:var(--muted);margin-bottom:10px}
+
+/* ---------- FOOTER ---------- */
+
+footer{background:linear-gradient(180deg,var(--primary-dark),#241849);color:#fff;padding:50px 24px 24px;margin-top:50px}
+
+.footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:32px}
+
+.footer-inner h4{color:var(--accent);margin-bottom:12px;font-family:'Poppins',sans-serif;font-size:0.95rem;letter-spacing:0.02em}
+
+.footer-inner ul{list-style:none}
+
+.footer-inner ul li{margin-bottom:8px}
+
+.footer-inner ul a{color:rgba(255,255,255,0.8);transition:.15s}
+
+.footer-inner ul a:hover{color:var(--accent);padding-left:4px}
+
+.footer-quote{font-style:italic;color:rgba(255,255,255,0.85);line-height:1.6}
+
+.footer-map iframe{width:100%;height:180px;border:0;border-radius:var(--radius-sm)}
+
+.footer-bottom{max-width:1180px;margin:30px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);text-align:center}
+
+.admin-link{display:inline-block;font-size:0.72rem;color:rgba(255,255,255,0.35);transition:.15s}
+
+.admin-link:hover{color:var(--accent)}
+
+@media(max-width:800px){.footer-inner{grid-template-columns:1fr}}
+
+/* ---------- MODAL / ADMIN ---------- */
+
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;z-index:1000;padding:20px}
+
+.modal-overlay.open{display:flex}
+
+.modal{background:#fff;border-radius:var(--radius);padding:28px;max-width:420px;width:100%}
+
+.modal h3{color:var(--primary);margin-bottom:16px}
+
+.modal label{display:block;font-weight:600;margin:10px 0 4px}
+
+.modal input{width:100%}
+
+.modal-actions{display:flex;gap:10px;margin-top:18px}
+
+.close-modal{background:none;border:none;font-size:1.3rem;float:right;color:#888}
+
+#adminPanel{display:none;background:#fff;border-top:6px solid var(--accent)}
+
+#adminPanel.open{display:block}
+
+.admin-tabs{display:flex;flex-wrap:wrap;gap:8px;padding:16px 20px;background:var(--secondary)}
+
+.admin-tab-btn{background:#fff;border:2px solid var(--primary);color:var(--primary);padding:8px 14px;border-radius:6px;font-weight:700;font-size:0.85rem}
+
+.admin-tab-btn.active{background:var(--primary);color:#fff}
+
+.admin-tabpanel{display:none;padding:24px}
+
+.admin-tabpanel.active{display:block}
+
+.admin-tabpanel h3{color:var(--primary);margin-bottom:14px}
+
+.form-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+
+.form-row>*{flex:1;min-width:160px}
+
+.msg{padding:10px;border-radius:6px;margin:10px 0;font-weight:600}
+
+.msg.ok{background:#d8f3dc;color:#1b4332}
+
+.msg.err{background:#fde2e1;color:#b3261e}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ============ HEADER ============ -->
+
+<header>
+
+  <div class="header-inner">
+
+    <div class="brand">
+
+      <img id="logoImg" src="" alt="logo" style="display:none">
+
+      <div class="logo-placeholder" id="logoPlaceholder" title="Add your logo in Admin → Site Settings">I</div>
+
+      <div class="brand-text">
+
+        <h1 id="siteName">Your Coaching Institute</h1>
+
+        <span class="tagline">Learn · Grow · Excel</span>
+
+      </div>
+
+    </div>
+
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+
+      <span></span><span></span><span></span>
+
+    </button>
+
+  </div>
+
+  <nav id="mainNav">
+
+    <ul class="nav-list" id="navList"></ul>
+
+  </nav>
+
+</header>
+
+<!-- ============ HOME ============ -->
+
+<section class="page-section active" id="page-home">
+
+  <div class="hero">
+
+    <h2 id="heroTitle">Welcome to Excellence in Education</h2>
+
+    <p id="heroSubtitle">Shaping futures, one student at a time.</p>
+
+  </div>
+
+  <div class="flash-cards">
+
+    <div class="flash-card"><div class="icon-badge">📊</div><div class="big" id="visitorsCount">10,000+</div><div class="label">Website Visitors</div></div>
+
+    <div class="flash-card"><div class="icon-badge">👩‍🏫</div><div class="big" style="font-size:1rem" id="teachersText">50+ Experienced Faculty</div></div>
+
+    <div class="flash-card"><div class="icon-badge">📝</div><div class="big" style="font-size:1rem" id="testsText">Regular Monthly Assessments</div></div>
+
+  </div>
+
+</section>
+
+<!-- ============ ABOUT ============ -->
+
+<section class="page-section" id="page-about-mission">
+
+  <h2 class="section-title">Our Mission</h2>
+
+  <div class="about-block" id="aboutBlock-mission"></div>
+
+</section>
+
+<section class="page-section" id="page-about-vision">
+
+  <h2 class="section-title">Our Vision</h2>
+
+  <div class="about-block" id="aboutBlock-vision"></div>
+
+</section>
+
+<section class="page-section" id="page-about-director">
+
+  <h2 class="section-title">Director's Message</h2>
+
+  <div class="about-block" id="aboutBlock-director"></div>
+
+</section>
+
+<section class="page-section" id="page-about-principal">
+
+  <h2 class="section-title">Principal's Message</h2>
+
+  <div class="about-block" id="aboutBlock-principal"></div>
+
+</section>
+
+<!-- ============ SYLLABUS / LESSON PLAN / TIMETABLE / NOTES / PYQ (shared UI) ============ -->
+
+<section class="page-section" id="page-syllabus">
+
+  <h2 class="section-title">Syllabus</h2>
+
+  <div class="select-row">
+
+    <select id="syllabus-class"><option value="">Select Class</option></select>
+
+    <select id="syllabus-subject"><option value="">Select Subject</option></select>
+
+  </div>
+
+  <ul class="file-list" id="syllabus-files"></ul>
+
+</section>
+
+<section class="page-section" id="page-lesson-plan">
+
+  <h2 class="section-title">Lesson Plan</h2>
+
+  <div class="select-row">
+
+    <select id="lesson_plan-class"><option value="">Select Class</option></select>
+
+    <select id="lesson_plan-subject"><option value="">Select Subject</option></select>
+
+  </div>
+
+  <ul class="file-list" id="lesson_plan-files"></ul>
+
+</section>
+
+<section class="page-section" id="page-timetable">
+
+  <h2 class="section-title">Time Table</h2>
+
+  <div class="select-row">
+
+    <select id="timetable-class"><option value="">Select Class</option></select>
+
+  </div>
+
+  <ul class="file-list" id="timetable-files"></ul>
+
+</section>
+
+<!-- ============ STUDENT HUB ============ -->
+
+<section class="page-section" id="page-hub-monthly-test">
+
+  <h2 class="section-title">Monthly Test</h2>
+
+  <div id="quizListWrap">
+
+    <div class="select-row">
+
+      <select id="quizSelect"><option value="">Select a Test</option></select>
+
+    </div>
+
+    <div id="quizArea"></div>
+
+  </div>
+
+</section>
+
+<section class="page-section" id="page-hub-notes">
+
+  <h2 class="section-title">Notes</h2>
+
+  <div class="select-row">
+
+    <select id="notes-class"><option value="">Select Class</option></select>
+
+    <select id="notes-subject"><option value="">Select Subject</option></select>
+
+  </div>
+
+  <ul class="file-list" id="notes-files"></ul>
+
+</section>
+
+<section class="page-section" id="page-hub-pyq">
+
+  <h2 class="section-title">Previous Year Questions</h2>
+
+  <div class="select-row">
+
+    <select id="pyq-class"><option value="">Select Class</option></select>
+
+    <select id="pyq-subject"><option value="">Select Subject</option></select>
+
+  </div>
+
+  <ul class="file-list" id="pyq-files"></ul>
+
+</section>
+
+<section class="page-section" id="page-hub-video">
+
+  <h2 class="section-title">Video Lectures</h2>
+
+  <div id="videoList"></div>
+
+</section>
+
+<section class="page-section" id="page-hub-leaderboard">
+
+  <h2 class="section-title">Leader Board</h2>
+
+  <div class="select-row">
+
+    <select id="leaderboardQuizSelect"><option value="">Select a Test</option></select>
+
+  </div>
+
+  <table id="leaderboardTable" style="display:none">
+
+    <thead><tr><th>Rank</th><th>Name</th><th>Score</th><th>Date</th></tr></thead>
+
+    <tbody id="leaderboardBody"></tbody>
+
+  </table>
+
+</section>
+
+<!-- ============ MOTIVATION & INSPIRATION ============ -->
+
+<section class="page-section" id="page-motivation-stories">
+
+  <h2 class="section-title">Stories</h2>
+
+  <div id="storiesList"></div>
+
+</section>
+
+<section class="page-section" id="page-motivation-educationists">
+
+  <h2 class="section-title">Great Educationists & Their Quotes</h2>
+
+  <div id="educationistsList"></div>
+
+</section>
+
+<!-- ============ CONTACT ============ -->
+
+<section class="page-section" id="page-contact">
+
+  <h2 class="section-title">Contact Us</h2>
+
+  <div class="contact-cards">
+
+    <div class="flash-card"><div class="label">✉️ Email</div><div class="big" style="font-size:1.05rem" id="contactEmail"></div></div>
+
+    <div class="flash-card"><div class="label">📞 Phone</div><div class="big" style="font-size:1.05rem" id="contactPhone"></div></div>
+
+    <div class="flash-card"><div class="label">📍 Address</div><div class="big" style="font-size:1.05rem" id="contactAddress"></div></div>
+
+  </div>
+
+</section>
+
+<!-- ============ FOOTER (common to all pages) ============ -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <h4>Quick Links</h4>
+
+      <ul id="footerQuickLinks"><li><a href="#" data-page="home">Home</a></li></ul>
+
+    </div>
+
+    <div>
+
+      <h4>Education Quote</h4>
+
+      <p class="footer-quote" id="footerQuote"></p>
+
+    </div>
+
+    <div class="footer-map">
+
+      <h4>Find Us</h4>
+
+      <div id="mapEmbedWrap"></div>
+
+    </div>
+
+  </div>
+
+<div class="footer-bottom">
+
+  <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-bottom:10px">
+
+    © 2026 Your Coaching Institute. All rights reserved.
+
+  </p>
+
+  <div class="admin-link"><a href="#" id="adminAccessLink">admin</a></div>
+
+</div>
+
+  <div class="admin-link"><a href="#" id="adminAccessLink">admin</a></div>
+
+</footer>
+
+<!-- ============ ADMIN LOGIN MODAL ============ -->
+
+<div class="modal-overlay" id="loginModal">
+
+  <div class="modal">
+
+    <button class="close-modal" id="closeLoginModal">&times;</button>
+
+    <h3>Admin Login</h3>
+
+    <div id="loginMsg"></div>
+
+    <label>Username</label>
+
+    <input type="text" id="loginUsername" value="admin">
+
+    <label>Password</label>
+
+    <input type="password" id="loginPassword">
+
+    <div class="modal-actions">
+
+      <button class="btn" id="doLoginBtn">Login</button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ============ ADMIN PANEL ============ -->
+
+<div id="adminPanel">
+
+  <div class="admin-tabs" id="adminTabs">
+
+    <button class="admin-tab-btn active" data-tab="settings">Site Settings</button>
+
+    <button class="admin-tab-btn" data-tab="nav">Menus</button>
+
+    <button class="admin-tab-btn" data-tab="about">About Sections</button>
+
+    <button class="admin-tab-btn" data-tab="classes">Classes & Subjects</button>
+
+    <button class="admin-tab-btn" data-tab="resources">Syllabus/LessonPlan/Notes/PYQ/Timetable</button>
+
+    <button class="admin-tab-btn" data-tab="videos">Video Lectures</button>
+
+    <button class="admin-tab-btn" data-tab="quizzes">Monthly Tests</button>
+
+    <button class="admin-tab-btn" data-tab="motivation">Stories & Educationists</button>
+
+    <button class="btn btn-danger" id="logoutBtn" style="margin-left:auto">Logout</button>
+
+  </div>
+
+  <div class="admin-tabpanel active" data-tab="settings">
+
+    <h3>Site Settings</h3>
+
+    <div id="settingsMsg"></div>
+
+    <div class="form-row"><input id="set_site_name" placeholder="Institution Name"></div>
+
+    <div class="card" style="background:var(--secondary)">
+
+      <strong>Logo</strong> — no logo is uploaded yet, so a placeholder initial is shown in the header. Upload your institution's logo (PNG/JPG, square works best) below.
+
+      <div class="form-row" style="margin-top:10px">
+
+        <input type="file" id="set_logo_file" accept="image/*"><button class="btn" id="uploadLogoBtn">Upload Logo</button>
+
+      </div>
+
+    </div>
+
+    <div class="form-row">
+
+      <input id="set_hero_title" placeholder="Hero Title">
+
+      <input id="set_hero_subtitle" placeholder="Hero Subtitle">
+
+    </div>
+
+    <div class="form-row">
+
+      <input id="set_visitors" placeholder="Visitors count e.g. 10,000+">
+
+      <input id="set_teachers" placeholder="Teachers flash card text">
+
+      <input id="set_tests" placeholder="Tests flash card text">
+
+    </div>
+
+    <p style="margin-top:10px;color:var(--muted);font-size:0.88rem">Pick any colors you like — the whole site (nav, buttons, headings, hero) updates live from these, no fixed palette required.</p>
+
+    <div class="form-row">
+
+      <label style="flex:0 0 100%;font-size:0.82rem;color:var(--muted)">Background</label>
+
+      <input type="color" id="set_color_bg" style="height:42px;padding:4px">
+
+      <label style="flex:0 0 100%;font-size:0.82rem;color:var(--muted)">Primary (nav / headings / buttons)</label>
+
+      <input type="color" id="set_color_dark" style="height:42px;padding:4px">
+
+      <label style="flex:0 0 100%;font-size:0.82rem;color:var(--muted)">Secondary (soft card tint)</label>
+
+      <input type="color" id="set_color_mint" style="height:42px;padding:4px">
+
+      <label style="flex:0 0 100%;font-size:0.82rem;color:var(--muted)">Accent (highlights)</label>
+
+      <input type="color" id="set_color_gold" style="height:42px;padding:4px">
+
+    </div>
+
+    <div class="form-row"><textarea id="set_footer_quote" placeholder="Footer education quote"></textarea></div>
+
+    <div class="form-row"><textarea id="set_map_embed" placeholder="Google Map embed iframe code"></textarea></div>
+
+    <div class="form-row">
+
+      <input id="set_email" placeholder="Contact email">
+
+      <input id="set_phone" placeholder="Contact phone">
+
+      <input id="set_address" placeholder="Contact address">
+
+    </div>
+
+    <button class="btn btn-gold" id="saveSettingsBtn">Save Settings</button>
+
+  </div>
+
+  <div class="admin-tabpanel" data-tab="nav">
+
+    <h3>Navigation Menus</h3>
+
+    <p>Built-in top menus can't be deleted, but you can add new top-level menus and sub-dropdowns — each gets its own real content page (text + optional image) that appears live on the site.</p>
+
+    <div id="navAdminList"></div>
+
+    <div class="form-row">
+
+      <select id="nav_parent"><option value="">-- New top-level menu --</option></select>
+
+      <input id="nav_label" placeholder="Label e.g. Careers">
+
+      <input id="nav_slug" placeholder="slug-like-this">
+
+      <button class="btn" id="addNavBtn">Add</button>
+
+    </div>
+
+    <div id="customPageEditor" style="margin-top:16px"></div>
+
+  </div>
+
+  <div class="admin-tabpanel" data-tab="about">
+
+    <h3>About Sections</h3>
+
+    <div id="aboutAdminList"></div>
+
+  </div>
+
+  <div class="admin-tabpanel" data-tab="classes">
+
+    <h3>Classes</h3>
+
+    <div class="form-row"><input id="newClassName" placeholder="Class name e.g. Class 10"><button class="btn" id="addClassBtn">Add Class</button></div>
+
+    <div id="classesAdminList"></div>
+
+    <h3 style="margin-top:20px">Subjects</h3>
+
+    <div class="form-row">
+
+      <select id="subj_class"></select>
+
+      <input id="newSubjectName" placeholder="Subject name">
+
+      <button class="btn" id="addSubjectBtn">Add Subject</button>
+
+    </div>
+
+    <div id="subjectsAdminList"></div>
+
+  </div>
+
+  <div class="admin-tabpanel" data-tab="resources">
+
+    <h3>Upload Resource (Syllabus / Lesson Plan / Notes / PYQ / Timetable)</h3>
+
+    <div class="form-row">
+
+      <select id="res_type">
+
+        <option value="syllabus">Syllabus</option>
+
+        <option value="lesson_plan">Lesson Plan</option>
+
+        <option value="notes">Notes</option>
+
+        <option value="pyq">PYQ</option>
+
+        <option value="timetable">Timetable</option>
+
+      </select>
+
+      <select id="res_class"></select>
+
+      <select id="res_subject"><option value="">(select class first)</option></select>
+
+    </div>
+
+    <div class="form-row">
+
+      <input id="res_title" placeholder="Title">
+
+      <input type="file" id="res_file" accept="application/pdf">
+
+      <button class="btn" id="uploadResourceBtn">Upload</button>
+
+    </div>
+
+    <div id="resourceAdminMsg"></div>
+
+    <div id="resourceAdminList"></div>
+
+  </div>
+
+  <div class="admin-tabpanel" data-tab="videos">
+
+    <h3>Video Lectures</h3>
+
+    <div class="form-row">
+
+      <input id="vid_title" placeholder="Title">
+
+      <input id="vid_caption" placeholder="Caption">
+
+    </div>
+
+    <div class="form-row">
+
+      <input type="file" id="vid_file" accept="video/*">
+
+      <button class="btn" id="uploadVideoBtn">Upload Video</button>
+
+    </div>
+
+    <div id="videoAdminList"></div>
+
+  </div>
+
+  <div class="admin-tabpanel" data-tab="quizzes">
+
+    <h3>Monthly Tests</h3>
+
+    <div class="form-row">
+
+      <input id="quiz_title" placeholder="Test title e.g. September Monthly Test">
+
+      <select id="quiz_class"></select>
+
+      <button class="btn" id="createQuizBtn">Create Test</button>
+
+    </div>
+
+    <div id="quizAdminList"></div>
+
+    <div id="quizEditorWrap" style="display:none">
+
+      <h4 id="quizEditorTitle" style="margin:16px 0 8px;color:var(--primary)"></h4>
+
+      <div id="questionAdminList"></div>
+
+      <div class="card">
+
+        <div class="form-row"><input id="q_text" placeholder="Question text"></div>
+
+        <div id="optionsWrap"></div>
+
+        <button class="btn" id="addOptionBtn" type="button">+ Add Option</button>
+
+        <div class="form-row" style="margin-top:10px">
+
+          <label style="flex:0">Correct option #:</label>
+
+          <input id="q_correct" type="text" placeholder="1" style="max-width:80px">
+
+          <button class="btn btn-gold" id="addQuestionBtn">Add Question</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="admin-tabpanel" data-tab="motivation">
+
+    <h3>Stories</h3>
+
+    <div class="form-row">
+
+      <input id="story_title" placeholder="Story title">
+
+    </div>
+
+    <div class="form-row"><textarea id="story_content" placeholder="Story content"></textarea></div>
+
+    <div class="form-row"><input type="file" id="story_image" accept="image/*"><button class="btn" id="addStoryBtn">Add Story</button></div>
+
+    <div id="storiesAdminList"></div>
+
+    <h3 style="margin-top:24px">Great Educationists</h3>
+
+    <div class="form-row">
+
+      <input id="edu_name" placeholder="Name">
+
+    </div>
+
+    <div class="form-row"><textarea id="edu_quote" placeholder="Quote"></textarea></div>
+
+    <div class="form-row"><input type="file" id="edu_photo" accept="image/*"><button class="btn" id="addEduBtn">Add Educationist</button></div>
+
+    <div id="educationistsAdminList"></div>
+
+  </div>
+
+</div>
+
+<script>
+/* =========================================================================
+   DEMO MOCK BACKEND
+   Replaces the Flask + SQLite backend with a localStorage-backed store and
+   a fetch() interceptor, so the original frontend code below runs unmodified.
+   Login: admin / admin123
+   ========================================================================= */
+(function(){
+  const DB_KEY = 'ci_demo_db_v1';
+
+  function defaultDB(){
+    return {
+      admin: { username:'admin', password:'admin123' },
+      settings: {
+        site_name:'Your Coaching Institute', logo_url:'',
+        color_bg:'#FFFFFF', color_dark_green:'#5B3A9B', color_mint:'#F2ECFB', color_gold:'#F2A65A',
+        hero_title:'Welcome to Excellence in Education', hero_subtitle:'Shaping futures, one student at a time.',
+        visitors_count:'10,000+', teachers_text:'50+ Experienced Faculty', tests_text:'Regular Monthly Assessments',
+        footer_quote:'Education is the most powerful weapon which you can use to change the world.',
+        map_embed:'', contact_email:'info@example.com', contact_phone:'+91 00000 00000', contact_address:'Your institute address here'
+      },
+      nav_items: [
+        {id:1,parent_id:null,label:'Home',slug:'home',sort_order:1,is_builtin:1},
+        {id:2,parent_id:null,label:'About',slug:'about',sort_order:2,is_builtin:1},
+        {id:3,parent_id:null,label:'Syllabus',slug:'syllabus',sort_order:3,is_builtin:1},
+        {id:4,parent_id:null,label:'Lesson Plan',slug:'lesson-plan',sort_order:4,is_builtin:1},
+        {id:5,parent_id:null,label:'Time Table',slug:'timetable',sort_order:5,is_builtin:1},
+        {id:6,parent_id:null,label:'Student Hub',slug:'student-hub',sort_order:6,is_builtin:1},
+        {id:7,parent_id:null,label:'Motivation & Inspiration',slug:'motivation',sort_order:7,is_builtin:1},
+        {id:8,parent_id:null,label:'Contact',slug:'contact',sort_order:8,is_builtin:1}
+      ],
+      about_content: {
+        mission:{section:'mission',title:'Mission',content:'To provide every student with the guidance, resources and support they need to reach their full academic potential.',image_url:''},
+        vision:{section:'vision',title:'Vision',content:'To be the most trusted coaching institute in the region, known for results and for the character we build in our students.',image_url:''},
+        director:{section:'director',title:'Director',content:'Welcome to our institute — a place where curiosity is encouraged and every student is known by name.',image_url:''},
+        principal:{section:'principal',title:'Principal',content:'Our faculty is committed to academic excellence and to the wellbeing of every child in our care.',image_url:''}
+      },
+      classes:[{id:1,name:'Class 9'},{id:2,name:'Class 10'}],
+      subjects:[{id:1,class_id:1,name:'Mathematics'},{id:2,class_id:1,name:'Science'},{id:3,class_id:2,name:'Mathematics'},{id:4,class_id:2,name:'Science'}],
+      resources:[
+        {id:1,resource_type:'syllabus',class_id:1,subject_id:1,title:'Class 9 Maths Syllabus',file_url:'#',uploaded_at:new Date().toISOString()},
+        {id:2,resource_type:'timetable',class_id:1,subject_id:null,title:'Class 9 Timetable',file_url:'#',uploaded_at:new Date().toISOString()}
+      ],
+      videos:[],
+      quizzes:[{id:1,title:'September Monthly Test',class_id:1,published:1,created_at:new Date().toISOString()}],
+      questions:[
+        {id:1,quiz_id:1,question_text:'What is 7 x 8?',options:['54','56','58','64'],correct_index:1,sort_order:0},
+        {id:2,quiz_id:1,question_text:'Water boils at what temperature (°C) at sea level?',options:['90','95','100','105'],correct_index:2,sort_order:1}
+      ],
+      attempts:[],
+      stories:[{id:1,title:'From Struggling to Scoring 95%',content:'A student who once feared exams found her footing after joining our weekend doubt-clearing sessions.',image_url:'',created_at:new Date().toISOString()}],
+      educationists:[{id:1,name:'Dr. A.P.J. Abdul Kalam',quote:'Learning gives creativity, creativity leads to thinking, thinking provides knowledge, knowledge makes you great.',photo_url:''}],
+      custom_pages:{},
+      next_id:{classes:3,subjects:5,resources:3,videos:1,quizzes:2,questions:3,attempts:1,stories:2,educationists:2,nav_items:9}
+    };
+  }
+
+  function loadDB(){
+    try{
+      const raw = localStorage.getItem(DB_KEY);
+      if(raw) return JSON.parse(raw);
+    }catch(e){}
+    const fresh = defaultDB();
+    saveDB(fresh);
+    return fresh;
+  }
+  function saveDB(db){
+    try{ localStorage.setItem(DB_KEY, JSON.stringify(db)); }
+    catch(e){ console.warn('Demo storage full — large file uploads may not persist after reload.', e); }
+  }
+  function nid(db, table){ const n = db.next_id[table]++; return n; }
+  function isAdmin(){ return sessionStorage.getItem('ci_demo_admin') === '1'; }
+
+  function fileToDataURL(file){
+    return new Promise((resolve)=>{
+      if(!file){ resolve(''); return; }
+      const r = new FileReader();
+      r.onload = ()=> resolve(r.result);
+      r.onerror = ()=> resolve('');
+      r.readAsDataURL(file);
+    });
+  }
+
+  function json(obj){ return { json: async ()=> obj, ok:true }; }
+
+  async function handle(path, method, opts){
+    const db = loadDB();
+    const qIndex = path.indexOf('?');
+    const query = new URLSearchParams(qIndex>=0 ? path.slice(qIndex+1) : '');
+    const p = qIndex>=0 ? path.slice(0,qIndex) : path;
+    const seg = p.split('/').filter(Boolean); // ['api', ...]
+
+    let body = {};
+    let form = null;
+    if(opts && opts.body instanceof FormData){
+      form = opts.body;
+    } else if(opts && opts.body){
+      try{ body = JSON.parse(opts.body); }catch(e){ body = {}; }
+    }
+
+    const need = (fn)=> isAdmin() ? fn() : json({error:'Unauthorized'});
+
+    // ---- settings
+    if(p==='/api/settings' && method==='GET') return json(db.settings);
+    if(p==='/api/settings' && method==='PUT') return need(()=>{
+      Object.assign(db.settings, body); saveDB(db); return json({success:true});
+    });
+    if(p==='/api/settings/logo' && method==='POST') return need(async ()=>{
+      const url = await fileToDataURL(form.get('file')); db.settings.logo_url = url; saveDB(db); return json({success:true,url});
+    });
+
+    // ---- nav
+    if(p==='/api/nav' && method==='GET'){
+      const rows = db.nav_items.slice();
+      const tree = rows.filter(r=>r.parent_id===null);
+      tree.forEach(t=> t.children = rows.filter(r=>r.parent_id===t.id));
+      return json(tree);
+    }
+    if(p==='/api/nav' && method==='POST') return need(()=>{
+      const id = nid(db,'nav_items');
+      db.nav_items.push({id, parent_id: body.parent_id||null, label:body.label, slug:body.slug, sort_order:body.sort_order||99, is_builtin:0});
+      saveDB(db); return json({success:true,id});
+    });
+    if(seg[1]==='nav' && seg.length===3 && method==='DELETE') return need(()=>{
+      const id = parseInt(seg[2]);
+      const item = db.nav_items.find(n=>n.id===id);
+      if(item && item.is_builtin) return json({error:'Cannot delete a built-in top-level menu'});
+      db.nav_items = db.nav_items.filter(n=>n.id!==id && n.parent_id!==id);
+      saveDB(db); return json({success:true});
+    });
+
+    // ---- custom pages
+    if(seg[1]==='custom-pages' && seg.length===3 && method==='GET'){
+      const navId = parseInt(seg[2]);
+      const cp = db.custom_pages[navId] || {nav_item_id:navId,title:'',content:'',image_url:''};
+      const navItem = db.nav_items.find(n=>n.id===navId);
+      return json(Object.assign({},cp,{label: navItem?navItem.label:''}));
+    }
+    if(seg[1]==='custom-pages' && seg.length===3 && method==='PUT') return need(()=>{
+      const navId = parseInt(seg[2]);
+      const existing = db.custom_pages[navId] || {image_url:''};
+      db.custom_pages[navId] = Object.assign({}, existing, {title:body.title||'', content:body.content||''});
+      saveDB(db); return json({success:true});
+    });
+    if(seg[1]==='custom-pages' && seg.length===4 && seg[3]==='image' && method==='POST') return need(async ()=>{
+      const navId = parseInt(seg[2]);
+      const url = await fileToDataURL(form.get('file'));
+      const existing = db.custom_pages[navId] || {title:'',content:''};
+      db.custom_pages[navId] = Object.assign({}, existing, {image_url:url});
+      saveDB(db); return json({success:true,url});
+    });
+
+    // ---- about
+    if(p==='/api/about' && method==='GET') return json(db.about_content);
+    if(seg[1]==='about' && seg.length===3 && method==='PUT') return need(()=>{
+      const sec = seg[2];
+      if(!db.about_content[sec]) return json({error:'Invalid section'});
+      db.about_content[sec].title = body.title||''; db.about_content[sec].content = body.content||'';
+      saveDB(db); return json({success:true});
+    });
+    if(seg[1]==='about' && seg.length===4 && seg[3]==='image' && method==='POST') return need(async ()=>{
+      const sec = seg[2];
+      if(!db.about_content[sec]) return json({error:'Invalid section'});
+      const url = await fileToDataURL(form.get('file'));
+      db.about_content[sec].image_url = url; saveDB(db); return json({success:true,url});
+    });
+
+    // ---- classes
+    if(p==='/api/classes' && method==='GET') return json(db.classes.slice().sort((a,b)=>a.name.localeCompare(b.name)));
+    if(p==='/api/classes' && method==='POST') return need(()=>{
+      if(db.classes.some(c=>c.name===body.name)) return json({error:'Class already exists'});
+      const id = nid(db,'classes'); db.classes.push({id,name:body.name}); saveDB(db); return json({success:true,id});
+    });
+    if(seg[1]==='classes' && seg.length===3 && method==='DELETE') return need(()=>{
+      const id = parseInt(seg[2]);
+      db.classes = db.classes.filter(c=>c.id!==id);
+      db.subjects = db.subjects.filter(s=>s.class_id!==id);
+      saveDB(db); return json({success:true});
+    });
+
+    // ---- subjects
+    if(p.startsWith('/api/subjects') && method==='GET'){
+      const classId = query.get('class_id');
+      let rows = db.subjects.slice();
+      if(classId) rows = rows.filter(s=>String(s.class_id)===String(classId));
+      return json(rows.sort((a,b)=>a.name.localeCompare(b.name)));
+    }
+    if(p==='/api/subjects' && method==='POST') return need(()=>{
+      const id = nid(db,'subjects'); db.subjects.push({id,class_id:body.class_id,name:body.name}); saveDB(db); return json({success:true,id});
+    });
+    if(seg[1]==='subjects' && seg.length===3 && method==='DELETE') return need(()=>{
+      const id = parseInt(seg[2]); db.subjects = db.subjects.filter(s=>s.id!==id); saveDB(db); return json({success:true});
+    });
+
+    // ---- resources
+    if(seg[1]==='resources' && seg.length===3 && method==='GET'){
+      const type = seg[2];
+      const classId = query.get('class_id'), subjId = query.get('subject_id');
+      let rows = db.resources.filter(r=>r.resource_type===type);
+      if(classId) rows = rows.filter(r=>String(r.class_id)===String(classId));
+      if(subjId) rows = rows.filter(r=>String(r.subject_id)===String(subjId));
+      return json(rows);
+    }
+    if(seg[1]==='resources' && seg.length===3 && method==='POST') return need(async ()=>{
+      const type = seg[2];
+      const file = form.get('file');
+      const url = file ? await fileToDataURL(file) : '#';
+      const id = nid(db,'resources');
+      db.resources.push({id,resource_type:type,class_id:form.get('class_id'),subject_id:form.get('subject_id')||null,title:form.get('title')||'Untitled',file_url:url,uploaded_at:new Date().toISOString()});
+      saveDB(db); return json({success:true,id,url});
+    });
+    if(seg[1]==='resources' && seg.length===3 && method==='DELETE') return need(()=>{
+      const id = parseInt(seg[2]); db.resources = db.resources.filter(r=>r.id!==id); saveDB(db); return json({success:true});
+    });
+
+    // ---- videos
+    if(p==='/api/videos' && method==='GET') return json(db.videos);
+    if(p==='/api/videos' && method==='POST') return need(async ()=>{
+      const file = form.get('file');
+      let url = '';
+      try{ url = await fileToDataURL(file); }catch(e){}
+      if(!url && file) url = URL.createObjectURL(file);
+      const id = nid(db,'videos');
+      db.videos.push({id,title:form.get('title')||'Untitled',caption:form.get('caption')||'',file_url:url,uploaded_at:new Date().toISOString()});
+      saveDB(db); return json({success:true,id,url});
+    });
+    if(seg[1]==='videos' && seg.length===3 && method==='DELETE') return need(()=>{
+      const id = parseInt(seg[2]); db.videos = db.videos.filter(v=>v.id!==id); saveDB(db); return json({success:true});
+    });
+
+    // ---- quizzes / questions / attempts / leaderboard
+    if(p.startsWith('/api/quizzes') && seg.length===2 && method==='GET'){
+      const publishedOnly = query.get('published_only') !== 'false';
+      let rows = db.quizzes.slice();
+      if(publishedOnly) rows = rows.filter(q=>q.published===1);
+      return json(rows);
+    }
+    if(p==='/api/quizzes' && method==='POST') return need(()=>{
+      const id = nid(db,'quizzes'); db.quizzes.push({id,title:body.title,class_id:body.class_id||null,published:0,created_at:new Date().toISOString()});
+      saveDB(db); return json({success:true,id});
+    });
+    if(seg[1]==='quizzes' && seg.length===4 && seg[3]==='publish' && method==='POST') return need(()=>{
+      const id = parseInt(seg[2]); const q = db.quizzes.find(q=>q.id===id);
+      if(q) q.published = body.published ? 1 : 0; saveDB(db); return json({success:true});
+    });
+    if(seg[1]==='quizzes' && seg.length===3 && method==='DELETE') return need(()=>{
+      const id = parseInt(seg[2]); db.quizzes = db.quizzes.filter(q=>q.id!==id); db.questions = db.questions.filter(x=>x.quiz_id!==id);
+      saveDB(db); return json({success:true});
+    });
+    if(seg[1]==='quizzes' && seg.length===4 && seg[3]==='questions' && method==='GET'){
+      const id = parseInt(seg[2]);
+      const rows = db.questions.filter(x=>x.quiz_id===id).sort((a,b)=>a.sort_order-b.sort_order).map(x=>({id:x.id,quiz_id:x.quiz_id,question_text:x.question_text,options:x.options,sort_order:x.sort_order}));
+      return json(rows);
+    }
+    if(seg[1]==='quizzes' && seg.length===5 && seg[3]==='questions' && seg[4]==='admin' && method==='GET') return need(()=>{
+      const id = parseInt(seg[2]);
+      const rows = db.questions.filter(x=>x.quiz_id===id).sort((a,b)=>a.sort_order-b.sort_order);
+      return json(rows);
+    });
+    if(seg[1]==='quizzes' && seg.length===4 && seg[3]==='questions' && method==='POST') return need(()=>{
+      const id = parseInt(seg[2]);
+      if(!body.options || body.options.length<2) return json({error:'At least 2 options required'});
+      const qid = nid(db,'questions');
+      db.questions.push({id:qid,quiz_id:id,question_text:body.question_text,options:body.options,correct_index:body.correct_index||0,sort_order:body.sort_order||0});
+      saveDB(db); return json({success:true,id:qid});
+    });
+    if(seg[1]==='questions' && seg.length===3 && method==='DELETE') return need(()=>{
+      const id = parseInt(seg[2]); db.questions = db.questions.filter(q=>q.id!==id); saveDB(db); return json({success:true});
+    });
+    if(seg[1]==='quizzes' && seg.length===4 && seg[3]==='submit' && method==='POST'){
+      const id = parseInt(seg[2]);
+      const name = (body.student_name||'').trim();
+      if(!name) return json({error:'Name required'});
+      const qs = db.questions.filter(x=>x.quiz_id===id);
+      let score = 0;
+      qs.forEach(q=>{ const sel = body.answers ? body.answers[q.id] : undefined; if(sel!==undefined && parseInt(sel)===q.correct_index) score++; });
+      db.attempts.push({id:nid(db,'attempts'),quiz_id:id,student_name:name,score,total:qs.length,taken_at:new Date().toISOString()});
+      saveDB(db); return json({score,total:qs.length});
+    }
+    if(seg[1]==='leaderboard' && seg.length===3 && method==='GET'){
+      const id = parseInt(seg[2]);
+      const rows = db.attempts.filter(a=>a.quiz_id===id).sort((a,b)=> b.score-a.score || new Date(a.taken_at)-new Date(b.taken_at)).slice(0,50)
+        .map(a=>({student_name:a.student_name,score:a.score,total:a.total,taken_at:a.taken_at}));
+      return json(rows);
+    }
+
+    // ---- stories
+    if(p==='/api/stories' && method==='GET') return json(db.stories.slice().sort((a,b)=> new Date(b.created_at)-new Date(a.created_at)));
+    if(p==='/api/stories' && method==='POST') return need(async ()=>{
+      const file = form.get('file'); const url = file ? await fileToDataURL(file) : '';
+      const id = nid(db,'stories');
+      db.stories.push({id,title:form.get('title'),content:form.get('content'),image_url:url,created_at:new Date().toISOString()});
+      saveDB(db); return json({success:true,id});
+    });
+    if(seg[1]==='stories' && seg.length===3 && method==='DELETE') return need(()=>{
+      const id = parseInt(seg[2]); db.stories = db.stories.filter(s=>s.id!==id); saveDB(db); return json({success:true});
+    });
+
+    // ---- educationists
+    if(p==='/api/educationists' && method==='GET') return json(db.educationists);
+    if(p==='/api/educationists' && method==='POST') return need(async ()=>{
+      const file = form.get('file'); const url = file ? await fileToDataURL(file) : '';
+      const id = nid(db,'educationists');
+      db.educationists.push({id,name:form.get('name'),quote:form.get('quote'),photo_url:url});
+      saveDB(db); return json({success:true,id});
+    });
+    if(seg[1]==='educationists' && seg.length===3 && method==='DELETE') return need(()=>{
+      const id = parseInt(seg[2]); db.educationists = db.educationists.filter(e=>e.id!==id); saveDB(db); return json({success:true});
+    });
+
+    // ---- admin auth
+    if(p==='/api/admin/login' && method==='POST'){
+      if(body.username===db.admin.username && body.password===db.admin.password){
+        sessionStorage.setItem('ci_demo_admin','1'); return json({success:true});
+      }
+      return json({error:'Invalid credentials'});
+    }
+    if(p==='/api/admin/logout' && method==='POST'){ sessionStorage.removeItem('ci_demo_admin'); return json({success:true}); }
+    if(p==='/api/admin/session' && method==='GET') return json({is_admin:isAdmin()});
+    if(p==='/api/admin/change-password' && method==='POST') return need(()=>{
+      if(body.old_password!==db.admin.password) return json({error:'Old password incorrect'});
+      db.admin.password = body.new_password; saveDB(db); return json({success:true});
+    });
+
+    return json({error:'Not found (demo)'});
+  }
+
+  const realFetch = window.fetch.bind(window);
+  window.fetch = function(url, opts){
+    const u = typeof url === 'string' ? url : (url && url.url) || '';
+    if(u.startsWith('/api/')) return handle(u, (opts&&opts.method)||'GET', opts);
+    return realFetch(url, opts);
+  };
+})();
+</script>
+<script>
+
+const API = ''; // same origin; change to e.g. 'http://localhost:5000' if serving frontend separately
+
+let STATE = { settings:{}, classes:[], nav:[], isAdmin:false };
+
+let currentQuizEditorId = null;
+
+// ---------------- Utility ----------------
+
+async function apiGet(path){ const r = await fetch(API+path); return r.json(); }
+
+async function apiJSON(path, method, body){
+
+  const r = await fetch(API+path, {method, headers:{'Content-Type':'application/json'}, credentials:'include', body: JSON.stringify(body)});
+
+  return r.json();
+
+}
+
+async function apiForm(path, method, formData){
+
+  const r = await fetch(API+path, {method, credentials:'include', body: formData});
+
+  return r.json();
+
+}
+
+function el(id){ return document.getElementById(id); }
+
+function shadeColor(hex, percent){
+
+  hex = (hex||'#5B3A9B').replace('#','');
+
+  if(hex.length===3) hex = hex.split('').map(c=>c+c).join('');
+
+  const num = parseInt(hex,16);
+
+  let r = (num>>16)+Math.round(255*(percent/100));
+
+  let g = ((num>>8)&0xff)+Math.round(255*(percent/100));
+
+  let b = (num&0xff)+Math.round(255*(percent/100));
+
+  r = Math.max(0,Math.min(255,r)); g = Math.max(0,Math.min(255,g)); b = Math.max(0,Math.min(255,b));
+
+  return '#'+(r.toString(16).padStart(2,'0'))+(g.toString(16).padStart(2,'0'))+(b.toString(16).padStart(2,'0'));
+
+}
+
+// ---------------- Page navigation ----------------
+
+function showPage(pageId){
+
+  document.querySelectorAll('.page-section').forEach(s=>s.classList.remove('active'));
+
+  const target = el('page-'+pageId);
+
+  if(target) target.classList.add('active');
+
+  document.getElementById('mainNav').classList.remove('open');
+
+  window.scrollTo(0,0);
+
+  loadPageData(pageId);
+
+}
+
+document.addEventListener('click', e=>{
+
+  const link = e.target.closest('[data-page]');
+
+  if(link){ e.preventDefault(); showPage(link.dataset.page); }
+
+});
+
+// ---------------- Hamburger ----------------
+
+el('hamburgerBtn').addEventListener('click', ()=> el('mainNav').classList.toggle('open'));
+
+// ---------------- Load settings ----------------
+
+async function loadSettings(){
+
+  const s = await apiGet('/api/settings');
+
+  STATE.settings = s;
+
+  document.documentElement.style.setProperty('--bg', s.color_bg);
+
+  document.documentElement.style.setProperty('--primary', s.color_dark_green);
+
+  document.documentElement.style.setProperty('--primary-dark', shadeColor(s.color_dark_green, -18));
+
+  document.documentElement.style.setProperty('--secondary', s.color_mint);
+
+  document.documentElement.style.setProperty('--accent', s.color_gold);
+
+  el('siteName').textContent = s.site_name;
+
+  if(s.logo_url){
+
+    el('logoImg').src = s.logo_url; el('logoImg').style.display='block';
+
+    el('logoPlaceholder').style.display='none';
+
+  } else {
+
+    el('logoImg').style.display='none';
+
+    el('logoPlaceholder').style.display='flex';
+
+    el('logoPlaceholder').textContent = (s.site_name||'?').trim().charAt(0).toUpperCase();
+
+  }
+
+  el('heroTitle').textContent = s.hero_title;
+
+  el('heroSubtitle').textContent = s.hero_subtitle;
+
+  el('visitorsCount').textContent = s.visitors_count;
+
+  el('teachersText').textContent = s.teachers_text;
+
+  el('testsText').textContent = s.tests_text;
+
+  el('footerQuote').textContent = s.footer_quote;
+
+  el('mapEmbedWrap').innerHTML = s.map_embed || '<p style="color:#cfe3d6">Map not set</p>';
+
+  el('contactEmail').textContent = s.contact_email;
+
+  el('contactPhone').textContent = s.contact_phone;
+
+  el('contactAddress').textContent = s.contact_address;
+
+}
+
+// Slugs with a dedicated, purpose-built page already in the HTML/JS.
+
+// Anything the admin adds beyond these automatically becomes a real, editable
+
+// content page (backed by /api/custom-pages) instead of a dead link.
+
+const STRUCTURAL_TOP_SLUGS = ['home','about','student-hub','motivation','syllabus','lesson-plan','timetable','contact'];
+
+// ---------------- Load nav ----------------
+
+async function loadNav(){
+
+  const nav = await apiGet('/api/nav');
+
+  STATE.nav = nav;
+
+  const list = el('navList');
+
+  list.innerHTML = '';
+
+  removeDynamicCustomSections();
+
+  // Home (no dropdown)
+
+  list.appendChild(buildTopNav({label:'Home', slug:'home', children:[]}));
+
+  nav.forEach(item=>{
+
+    if(item.slug === 'home') return;
+
+    const realChildren = (item.children || []).map(c=>({label:c.label, slug:'custom-'+c.id, navId:c.id}));
+
+    realChildren.forEach(c => ensureCustomPageSection(c.navId));
+
+    let children = [];
+
+    if(item.slug === 'about'){
+
+      children = [
+
+        {label:'Mission', slug:'about-mission'},{label:'Vision', slug:'about-vision'},
+
+        {label:"Director's Message", slug:'about-director'},{label:"Principal's Message", slug:'about-principal'}
+
+      ].concat(realChildren);
+
+    } else if(item.slug === 'student-hub'){
+
+      children = [
+
+        {label:'Monthly Test', slug:'hub-monthly-test'},{label:'Notes', slug:'hub-notes'},
+
+        {label:'PYQs', slug:'hub-pyq'},{label:'Video Lecture', slug:'hub-video'},
+
+        {label:'Leader Board', slug:'hub-leaderboard'}
+
+      ].concat(realChildren);
+
+    } else if(item.slug === 'motivation'){
+
+      children = [
+
+        {label:'Stories', slug:'motivation-stories'},{label:'Great Educationists', slug:'motivation-educationists'}
+
+      ].concat(realChildren);
+
+    } else if(['contact','syllabus','lesson-plan','timetable'].includes(item.slug)){
+
+      list.appendChild(buildTopNav({label:item.label, slug:item.slug, children:[]}));
+
+      return;
+
+    } else if(realChildren.length > 0){
+
+      // fully custom top-level menu with sub-dropdowns
+
+      list.appendChild(buildTopNav({label:item.label, slug:'custom-'+item.id, children:realChildren}));
+
+      return;
+
+    } else {
+
+      // fully custom top-level menu, no children -> itself is a page
+
+      ensureCustomPageSection(item.id);
+
+      list.appendChild(buildTopNav({label:item.label, slug:'custom-'+item.id, children:[]}));
+
+      return;
+
+    }
+
+    list.appendChild(buildTopNav({label:item.label, slug:item.slug, children}));
+
+  });
+
+  // Footer quick links: first page of each top-level menu, built from live nav
+
+  const quickPageFor = {about:'about-mission','student-hub':'hub-monthly-test',motivation:'motivation-stories'};
+
+  const footerHtml = ['<li><a href="#" data-page="home">Home</a></li>'];
+
+  nav.forEach(item=>{
+
+    if(item.slug==='home') return;
+
+    let pageSlug = quickPageFor[item.slug] || item.slug;
+
+    if(!STRUCTURAL_TOP_SLUGS.includes(item.slug)) pageSlug = 'custom-'+item.id;
+
+    footerHtml.push(`<li><a href="#" data-page="${pageSlug}">${item.label}</a></li>`);
+
+  });
+
+  el('footerQuickLinks').innerHTML = footerHtml.join('');
+
+}
+
+function buildTopNav(item){
+
+  const li = document.createElement('li');
+
+  if(!item.children || item.children.length===0){
+
+    const a = document.createElement('a');
+
+    a.href='#'; a.dataset.page = item.slug; a.textContent = item.label;
+
+    li.appendChild(a);
+
+  } else {
+
+    const label = document.createElement('div');
+
+    label.className='nav-label'; label.textContent = item.label + ' ▾';
+
+    const dd = document.createElement('ul'); dd.className='dropdown';
+
+    item.children.forEach(c=>{
+
+      const cli = document.createElement('li');
+
+      const a = document.createElement('a'); a.href='#'; a.dataset.page = c.slug; a.textContent = c.label;
+
+      cli.appendChild(a); dd.appendChild(cli);
+
+    });
+
+    label.addEventListener('click', ()=> dd.classList.toggle('open'));
+
+    li.appendChild(label); li.appendChild(dd);
+
+  }
+
+  return li;
+
+}
+
+// ---------------- Dynamic custom pages (any admin-added menu/sub-menu) ----------------
+
+function removeDynamicCustomSections(){
+
+  document.querySelectorAll('.page-section[data-dynamic="1"]').forEach(s=>s.remove());
+
+}
+
+function ensureCustomPageSection(navId){
+
+  const id = 'page-custom-'+navId;
+
+  if(el(id)) return;
+
+  const section = document.createElement('section');
+
+  section.className = 'page-section';
+
+  section.id = id;
+
+  section.dataset.dynamic = '1';
+
+  section.innerHTML = `
+
+    <h2 class="section-title" id="${id}-title">Loading…</h2>
+
+    <div class="about-block" id="${id}-body"></div>`;
+
+  // insert before footer
+
+  document.querySelector('footer').insertAdjacentElement('beforebegin', section);
+
+}
+
+async function renderCustomPage(navId){
+
+  const data = await apiGet('/api/custom-pages/'+navId);
+
+  const titleEl = el('page-custom-'+navId+'-title');
+
+  const bodyEl = el('page-custom-'+navId+'-body');
+
+  if(!titleEl || !bodyEl) return;
+
+  titleEl.textContent = data.label || data.title || 'Page';
+
+  bodyEl.innerHTML = '';
+
+  if(data.image_url){ const img = document.createElement('img'); img.src = data.image_url; bodyEl.appendChild(img); }
+
+  const txt = document.createElement('div'); txt.className = 'about-text';
+
+  txt.innerHTML = `<p>${(data.content || 'Content coming soon — an admin can add this from the Menus tab.').replace(/\n/g,'<br>')}</p>`;
+
+  bodyEl.appendChild(txt);
+
+}
+
+// ---------------- About ----------------
+
+async function loadAbout(){
+
+  const data = await apiGet('/api/about');
+
+  ['mission','vision','director','principal'].forEach(sec=>{
+
+    const d = data[sec] || {};
+
+    const wrap = el('aboutBlock-'+sec);
+
+    wrap.innerHTML = '';
+
+    if(d.image_url){ const img = document.createElement('img'); img.src = d.image_url; wrap.appendChild(img); }
+
+    const txt = document.createElement('div'); txt.className='about-text';
+
+    txt.innerHTML = `<p>${(d.content||'No content added yet.').replace(/\n/g,'<br>')}</p>`;
+
+    wrap.appendChild(txt);
+
+  });
+
+}
+
+// ---------------- Classes / subjects ----------------
+
+async function loadClassesInto(selectEl, placeholder){
+
+  const classes = await apiGet('/api/classes');
+
+  STATE.classes = classes;
+
+  selectEl.innerHTML = `<option value="">${placeholder}</option>` + classes.map(c=>`<option value="${c.id}">${c.name}</option>`).join('');
+
+}
+
+async function loadSubjectsInto(selectEl, classId, placeholder){
+
+  if(!classId){ selectEl.innerHTML = `<option value="">${placeholder}</option>`; return; }
+
+  const subs = await apiGet('/api/subjects?class_id='+classId);
+
+  selectEl.innerHTML = `<option value="">${placeholder}</option>` + subs.map(s=>`<option value="${s.id}">${s.name}</option>`).join('');
+
+}
+
+// ---- Resource pages (syllabus, lesson_plan, notes, pyq share this pattern) ----
+
+function setupResourcePage(type, hasSubject){
+
+  const classSel = el(type+'-class');
+
+  const subjSel = hasSubject ? el(type+'-subject') : null;
+
+  loadClassesInto(classSel, 'Select Class');
+
+  classSel.onchange = async ()=>{
+
+    if(hasSubject){ await loadSubjectsInto(subjSel, classSel.value, 'Select Subject'); renderResourceFiles(type); }
+
+    else renderResourceFiles(type);
+
+  };
+
+  if(subjSel) subjSel.onchange = ()=> renderResourceFiles(type);
+
+}
+
+async function renderResourceFiles(type){
+
+  const classSel = el(type+'-class');
+
+  const subjSel = el(type+'-subject');
+
+  const listEl = el(type+'-files');
+
+  if(!classSel.value){ listEl.innerHTML=''; return; }
+
+  let url = '/api/resources/'+type+'?class_id='+classSel.value;
+
+  if(subjSel){ if(!subjSel.value){ listEl.innerHTML='<p>Please select a subject.</p>'; return; } url += '&subject_id='+subjSel.value; }
+
+  const files = await apiGet(url);
+
+  listEl.innerHTML = files.length ? files.map(f=>`<li><span>${f.title}</span><a href="${f.file_url}" target="_blank" download>Download</a></li>`).join('') : '<li>No files available yet.</li>';
+
+}
+
+// ---------------- Student Hub: quizzes ----------------
+
+async function loadQuizSelect(){
+
+  const quizzes = await apiGet('/api/quizzes');
+
+  const sel = el('quizSelect');
+
+  sel.innerHTML = '<option value="">Select a Test</option>' + quizzes.map(q=>`<option value="${q.id}">${q.title}</option>`).join('');
+
+  const lbSel = el('leaderboardQuizSelect');
+
+  lbSel.innerHTML = '<option value="">Select a Test</option>' + quizzes.map(q=>`<option value="${q.id}">${q.title}</option>`).join('');
+
+}
+
+el('quizSelect').addEventListener('change', async e=>{
+
+  const quizId = e.target.value;
+
+  const area = el('quizArea');
+
+  if(!quizId){ area.innerHTML=''; return; }
+
+  const questions = await apiGet('/api/quizzes/'+quizId+'/questions');
+
+  if(questions.length===0){ area.innerHTML = '<p>No questions in this test yet.</p>'; return; }
+
+  area.innerHTML = `
+
+    <div class="form-row"><input id="studentNameInput" placeholder="Enter your name"></div>
+
+    <div id="quizQuestions"></div>
+
+    <button class="btn btn-gold" id="submitQuizBtn">Submit Test</button>
+
+    <div id="quizResult"></div>`;
+
+  const qWrap = el('quizQuestions');
+
+  questions.forEach((q,i)=>{
+
+    const div = document.createElement('div'); div.className='quiz-q';
+
+    div.innerHTML = `<strong>${i+1}. ${q.question_text}</strong>` + q.options.map((opt,idx)=>
+
+      `<label class="opt"><input type="radio" name="q_${q.id}" value="${idx}"> ${opt}</label>`).join('');
+
+    qWrap.appendChild(div);
+
+  });
+
+  el('submitQuizBtn').onclick = async ()=>{
+
+    const name = el('studentNameInput').value.trim();
+
+    if(!name){ alert('Please enter your name'); return; }
+
+    const answers = {};
+
+    questions.forEach(q=>{
+
+      const checked = document.querySelector(`input[name="q_${q.id}"]:checked`);
+
+      if(checked) answers[q.id] = checked.value;
+
+    });
+
+    const res = await apiJSON('/api/quizzes/'+quizId+'/submit','POST',{student_name:name, answers});
+
+    el('quizResult').innerHTML = `<div class="msg ok">You scored ${res.score} / ${res.total}</div>`;
+
+  };
+
+});
+
+el('leaderboardQuizSelect').addEventListener('change', async e=>{
+
+  const quizId = e.target.value;
+
+  const table = el('leaderboardTable'); const body = el('leaderboardBody');
+
+  if(!quizId){ table.style.display='none'; return; }
+
+  const rows = await apiGet('/api/leaderboard/'+quizId);
+
+  body.innerHTML = rows.map((r,i)=>`<tr><td>${i+1}</td><td>${r.student_name}</td><td>${r.score}</td><td>${r.taken_at}</td></tr>`).join('') || '<tr><td colspan="4">No attempts yet.</td></tr>';
+
+  table.style.display='table';
+
+});
+
+// ---------------- Videos ----------------
+
+async function loadVideos(){
+
+  const videos = await apiGet('/api/videos');
+
+  el('videoList').innerHTML = videos.map(v=>`
+
+    <div class="card">
+
+      <video controls style="width:100%;border-radius:8px;max-height:400px"><source src="${v.file_url}"></video>
+
+      <h4 style="margin-top:8px;color:var(--primary)">${v.title}</h4>
+
+      <p>${v.caption||''}</p>
+
+    </div>`).join('') || '<p>No videos uploaded yet.</p>';
+
+}
+
+// ---------------- Stories & Educationists ----------------
+
+async function loadStories(){
+
+  const stories = await apiGet('/api/stories');
+
+  el('storiesList').innerHTML = stories.map(s=>`
+
+    <div class="story-card">
+
+      ${s.image_url ? `<img src="${s.image_url}">` : ''}
+
+      <div><h4 style="color:var(--primary)">${s.title}</h4><p>${(s.content||'').replace(/\n/g,'<br>')}</p></div>
+
+    </div>`).join('') || '<p>No stories yet.</p>';
+
+}
+
+async function loadEducationists(){
+
+  const edu = await apiGet('/api/educationists');
+
+  el('educationistsList').innerHTML = edu.map(e=>`
+
+    <div class="edu-card">
+
+      ${e.photo_url ? `<img src="${e.photo_url}">` : ''}
+
+      <div><h4 style="color:var(--primary)">${e.name}</h4><blockquote>"${e.quote}"</blockquote></div>
+
+    </div>`).join('') || '<p>No entries yet.</p>';
+
+}
+
+// ---------------- Page data dispatcher ----------------
+
+function loadPageData(pageId){
+
+  if(pageId.startsWith('custom-')) return renderCustomPage(pageId.replace('custom-',''));
+
+  if(pageId==='syllabus') setupResourcePage('syllabus', true);
+
+  if(pageId==='lesson-plan') setupResourcePage('lesson_plan', true);
+
+  if(pageId==='timetable') setupResourcePage('timetable', false);
+
+  if(pageId==='hub-notes') setupResourcePage('notes', true);
+
+  if(pageId==='hub-pyq') setupResourcePage('pyq', true);
+
+  if(pageId==='hub-monthly-test') loadQuizSelect();
+
+  if(pageId==='hub-leaderboard') loadQuizSelect();
+
+  if(pageId==='hub-video') loadVideos();
+
+  if(pageId==='motivation-stories') loadStories();
+
+  if(pageId==='motivation-educationists') loadEducationists();
+
+}
+
+// ---------------- ADMIN: login/logout ----------------
+
+el('adminAccessLink').addEventListener('click', e=>{ e.preventDefault(); el('loginModal').classList.add('open'); });
+
+el('closeLoginModal').addEventListener('click', ()=> el('loginModal').classList.remove('open'));
+
+el('doLoginBtn').addEventListener('click', async ()=>{
+
+  const username = el('loginUsername').value, password = el('loginPassword').value;
+
+  const res = await apiJSON('/api/admin/login','POST',{username,password});
+
+  if(res.success){
+
+    STATE.isAdmin = true;
+
+    el('loginModal').classList.remove('open');
+
+    el('adminPanel').classList.add('open');
+
+    initAdminPanel();
+
+  } else {
+
+    el('loginMsg').innerHTML = '<div class="msg err">Invalid credentials</div>';
+
+  }
+
+});
+
+el('logoutBtn').addEventListener('click', async ()=>{
+
+  await apiJSON('/api/admin/logout','POST',{});
+
+  STATE.isAdmin = false;
+
+  el('adminPanel').classList.remove('open');
+
+});
+
+// ---------------- ADMIN: tabs ----------------
+
+el('adminTabs').addEventListener('click', e=>{
+
+  const btn = e.target.closest('.admin-tab-btn');
+
+  if(!btn) return;
+
+  document.querySelectorAll('.admin-tab-btn').forEach(b=>b.classList.remove('active'));
+
+  document.querySelectorAll('.admin-tabpanel').forEach(p=>p.classList.remove('active'));
+
+  btn.classList.add('active');
+
+  document.querySelector(`.admin-tabpanel[data-tab="${btn.dataset.tab}"]`).classList.add('active');
+
+});
+
+// ---------------- ADMIN: settings ----------------
+
+function fillSettingsForm(){
+
+  const s = STATE.settings;
+
+  el('set_site_name').value = s.site_name||'';
+
+  el('set_hero_title').value = s.hero_title||'';
+
+  el('set_hero_subtitle').value = s.hero_subtitle||'';
+
+  el('set_visitors').value = s.visitors_count||'';
+
+  el('set_teachers').value = s.teachers_text||'';
+
+  el('set_tests').value = s.tests_text||'';
+
+  el('set_color_bg').value = s.color_bg||'';
+
+  el('set_color_dark').value = s.color_dark_green||'';
+
+  el('set_color_mint').value = s.color_mint||'';
+
+  el('set_color_gold').value = s.color_gold||'';
+
+  el('set_footer_quote').value = s.footer_quote||'';
+
+  el('set_map_embed').value = s.map_embed||'';
+
+  el('set_email').value = s.contact_email||'';
+
+  el('set_phone').value = s.contact_phone||'';
+
+  el('set_address').value = s.contact_address||'';
+
+}
+
+el('uploadLogoBtn').addEventListener('click', async ()=>{
+
+  const f = el('set_logo_file').files[0]; if(!f) return;
+
+  const fd = new FormData(); fd.append('file', f);
+
+  await apiForm('/api/settings/logo','POST',fd);
+
+  await loadSettings();
+
+});
+
+el('saveSettingsBtn').addEventListener('click', async ()=>{
+
+  const body = {
+
+    site_name: el('set_site_name').value, hero_title: el('set_hero_title').value,
+
+    hero_subtitle: el('set_hero_subtitle').value, visitors_count: el('set_visitors').value,
+
+    teachers_text: el('set_teachers').value, tests_text: el('set_tests').value,
+
+    color_bg: el('set_color_bg').value, color_dark_green: el('set_color_dark').value,
+
+    color_mint: el('set_color_mint').value, color_gold: el('set_color_gold').value,
+
+    footer_quote: el('set_footer_quote').value, map_embed: el('set_map_embed').value,
+
+    contact_email: el('set_email').value, contact_phone: el('set_phone').value, contact_address: el('set_address').value
+
+  };
+
+  await apiJSON('/api/settings','PUT',body);
+
+  el('settingsMsg').innerHTML = '<div class="msg ok">Saved!</div>';
+
+  await loadSettings(); await loadNav();
+
+});
+
+// ---------------- ADMIN: nav ----------------
+
+async function refreshNavAdmin(){
+
+  const nav = await apiGet('/api/nav');
+
+  el('navAdminList').innerHTML = nav.map(n=>`
+
+    <div class="card">
+
+      <strong>${n.label}</strong> ${n.is_builtin ? '<span style="color:var(--muted);font-size:0.85rem">(built-in structural menu)</span>' : `
+
+        <button class="btn" onclick="openCustomPageEditor(${n.id}, '${n.label.replace(/'/g,"\\'")}')">Edit Content</button>
+
+        <button class="btn btn-danger" onclick="deleteNav(${n.id})">Delete</button>`}
+
+      <div style="margin-top:6px">${(n.children||[]).map(c=>`<div style="margin-top:4px">↳ ${c.label}
+
+        <button class="btn" onclick="openCustomPageEditor(${c.id}, '${c.label.replace(/'/g,"\\'")}')">Edit Content</button>
+
+        <button class="btn btn-danger" onclick="deleteNav(${c.id})">Delete</button></div>`).join('')}</div>
+
+    </div>`).join('') || '<p>No menus yet.</p>';
+
+  const parentSel = el('nav_parent');
+
+  parentSel.innerHTML = '<option value="">-- New top-level menu --</option>' + nav.map(n=>`<option value="${n.id}">Add under: ${n.label}</option>`).join('');
+
+}
+
+window.openCustomPageEditor = async (navId, label)=>{
+
+  const data = await apiGet('/api/custom-pages/'+navId);
+
+  el('customPageEditor').innerHTML = `
+
+    <div class="card" style="border:2px solid var(--accent)">
+
+      <h4 style="color:var(--primary);margin-bottom:10px">Editing content: ${label}</h4>
+
+      <div class="form-row"><textarea id="cp_content" placeholder="Page content" style="min-height:100px">${data.content||''}</textarea></div>
+
+      <div class="form-row">
+
+        <input type="file" id="cp_image" accept="image/*">
+
+        <button class="btn" id="cp_upload_img">Upload Image</button>
+
+        <button class="btn btn-gold" id="cp_save">Save</button>
+
+      </div>
+
+      ${data.image_url ? `<img src="${data.image_url}" style="width:100px;border-radius:8px;margin-top:6px">` : ''}
+
+    </div>`;
+
+  el('cp_save').onclick = async ()=>{
+
+    await apiJSON('/api/custom-pages/'+navId,'PUT',{title:label, content: el('cp_content').value});
+
+    alert('Saved!'); loadNav();
+
+  };
+
+  el('cp_upload_img').onclick = async ()=>{
+
+    const f = el('cp_image').files[0]; if(!f) return;
+
+    const fd = new FormData(); fd.append('file', f);
+
+    await apiForm('/api/custom-pages/'+navId+'/image','POST',fd);
+
+    openCustomPageEditor(navId, label);
+
+    loadNav();
+
+  };
+
+};
+
+window.deleteNav = async (id)=>{ await fetch('/api/nav/'+id, {method:'DELETE', credentials:'include'}); refreshNavAdmin(); loadNav(); };
+
+el('addNavBtn').addEventListener('click', async ()=>{
+
+  const parent_id = el('nav_parent').value || null;
+
+  const label = el('nav_label').value.trim(); const slug = el('nav_slug').value.trim();
+
+  if(!label || !slug) return alert('Label and slug required');
+
+  await apiJSON('/api/nav','POST',{parent_id, label, slug});
+
+  el('nav_label').value=''; el('nav_slug').value='';
+
+  refreshNavAdmin(); loadNav();
+
+});
+
+// ---------------- ADMIN: about ----------------
+
+async function refreshAboutAdmin(){
+
+  const data = await apiGet('/api/about');
+
+  const wrap = el('aboutAdminList'); wrap.innerHTML='';
+
+  ['mission','vision','director','principal'].forEach(sec=>{
+
+    const d = data[sec]||{};
+
+    const div = document.createElement('div'); div.className='card';
+
+    div.innerHTML = `
+
+      <h4 style="text-transform:capitalize">${sec}</h4>
+
+      <div class="form-row"><textarea id="about_${sec}_content" placeholder="Content">${d.content||''}</textarea></div>
+
+      <div class="form-row"><input type="file" id="about_${sec}_img" accept="image/*"><button class="btn" data-sec="${sec}" data-act="img">Upload Image</button>
+
+      <button class="btn btn-gold" data-sec="${sec}" data-act="save">Save Text</button></div>
+
+      ${d.image_url ? `<img src="${d.image_url}" style="width:100px;border-radius:8px;margin-top:6px">` : ''}
+
+    `;
+
+    wrap.appendChild(div);
+
+  });
+
+  wrap.querySelectorAll('button').forEach(btn=>{
+
+    btn.addEventListener('click', async ()=>{
+
+      const sec = btn.dataset.sec;
+
+      if(btn.dataset.act==='save'){
+
+        await apiJSON('/api/about/'+sec,'PUT',{title:sec, content: el('about_'+sec+'_content').value});
+
+        refreshAboutAdmin(); loadAbout();
+
+      } else {
+
+        const f = el('about_'+sec+'_img').files[0]; if(!f) return;
+
+        const fd = new FormData(); fd.append('file', f);
+
+        await apiForm('/api/about/'+sec+'/image','POST',fd);
+
+        refreshAboutAdmin(); loadAbout();
+
+      }
+
+    });
+
+  });
+
+}
+
+// ---------------- ADMIN: classes/subjects ----------------
+
+async function refreshClassesAdmin(){
+
+  const classes = await apiGet('/api/classes');
+
+  el('classesAdminList').innerHTML = classes.map(c=>`<div>${c.name} <button class="btn btn-danger" onclick="deleteClass(${c.id})">Delete</button></div>`).join('') || '<p>No classes yet.</p>';
+
+  const subjClassSel = el('subj_class');
+
+  subjClassSel.innerHTML = classes.map(c=>`<option value="${c.id}">${c.name}</option>`).join('');
+
+  if(classes.length) refreshSubjectsAdmin(subjClassSel.value);
+
+  await loadClassesInto(el('res_class'),'Select Class');
+
+  await loadClassesInto(el('quiz_class'),'Select Class');
+
+}
+
+window.deleteClass = async (id)=>{ await fetch('/api/classes/'+id,{method:'DELETE',credentials:'include'}); refreshClassesAdmin(); };
+
+el('addClassBtn').addEventListener('click', async ()=>{
+
+  const name = el('newClassName').value.trim(); if(!name) return;
+
+  await apiJSON('/api/classes','POST',{name}); el('newClassName').value=''; refreshClassesAdmin();
+
+});
+
+el('subj_class').addEventListener('change', e=> refreshSubjectsAdmin(e.target.value));
+
+async function refreshSubjectsAdmin(classId){
+
+  if(!classId){ el('subjectsAdminList').innerHTML=''; return; }
+
+  const subs = await apiGet('/api/subjects?class_id='+classId);
+
+  el('subjectsAdminList').innerHTML = subs.map(s=>`<div>${s.name} <button class="btn btn-danger" onclick="deleteSubject(${s.id})">Delete</button></div>`).join('') || '<p>No subjects yet.</p>';
+
+}
+
+window.deleteSubject = async (id)=>{ await fetch('/api/subjects/'+id,{method:'DELETE',credentials:'include'}); refreshSubjectsAdmin(el('subj_class').value); };
+
+el('addSubjectBtn').addEventListener('click', async ()=>{
+
+  const class_id = el('subj_class').value; const name = el('newSubjectName').value.trim();
+
+  if(!class_id||!name) return;
+
+  await apiJSON('/api/subjects','POST',{class_id, name}); el('newSubjectName').value=''; refreshSubjectsAdmin(class_id);
+
+});
+
+// ---------------- ADMIN: resources ----------------
+
+el('res_class').addEventListener('change', async e=>{
+
+  await loadSubjectsInto(el('res_subject'), e.target.value, '(none - for timetable)');
+
+});
+
+el('res_type').addEventListener('change', ()=> refreshResourceAdmin());
+
+el('uploadResourceBtn').addEventListener('click', async ()=>{
+
+  const type = el('res_type').value, classId = el('res_class').value, subjId = el('res_subject').value;
+
+  const title = el('res_title').value.trim(); const file = el('res_file').files[0];
+
+  if(!classId || !title || !file) return el('resourceAdminMsg').innerHTML='<div class="msg err">Class, title and file are required.</div>';
+
+  if(type!=='timetable' && !subjId) return el('resourceAdminMsg').innerHTML='<div class="msg err">Subject is required for this type.</div>';
+
+  const fd = new FormData(); fd.append('title', title); fd.append('class_id', classId);
+
+  if(subjId) fd.append('subject_id', subjId); fd.append('file', file);
+
+  const res = await apiForm('/api/resources/'+type,'POST',fd);
+
+  if(res.error) el('resourceAdminMsg').innerHTML = `<div class="msg err">${res.error}</div>`;
+
+  else { el('resourceAdminMsg').innerHTML = '<div class="msg ok">Uploaded!</div>'; el('res_title').value=''; el('res_file').value=''; refreshResourceAdmin(); }
+
+});
+
+async function refreshResourceAdmin(){
+
+  const type = el('res_type').value;
+
+  const files = await apiGet('/api/resources/'+type);
+
+  el('resourceAdminList').innerHTML = files.map(f=>`<li><span>${f.title}</span><span><a href="${f.file_url}" target="_blank">View</a> <button class="btn btn-danger" onclick="deleteResource(${f.id})">Delete</button></span></li>`).join('') || '<li>No files yet.</li>';
+
+}
+
+window.deleteResource = async(id)=>{ await fetch('/api/resources/'+id,{method:'DELETE',credentials:'include'}); refreshResourceAdmin(); };
+
+// ---------------- ADMIN: videos ----------------
+
+el('uploadVideoBtn').addEventListener('click', async ()=>{
+
+  const title = el('vid_title').value.trim(); const caption = el('vid_caption').value.trim();
+
+  const file = el('vid_file').files[0]; if(!title||!file) return alert('Title and file required');
+
+  const fd = new FormData(); fd.append('title', title); fd.append('caption', caption); fd.append('file', file);
+
+  await apiForm('/api/videos','POST',fd);
+
+  el('vid_title').value=''; el('vid_caption').value=''; el('vid_file').value='';
+
+  refreshVideoAdmin();
+
+});
+
+async function refreshVideoAdmin(){
+
+  const videos = await apiGet('/api/videos');
+
+  el('videoAdminList').innerHTML = videos.map(v=>`<div class="card">${v.title} <button class="btn btn-danger" onclick="deleteVideo(${v.id})">Delete</button></div>`).join('') || '<p>No videos yet.</p>';
+
+}
+
+window.deleteVideo = async(id)=>{ await fetch('/api/videos/'+id,{method:'DELETE',credentials:'include'}); refreshVideoAdmin(); };
+
+// ---------------- ADMIN: quizzes ----------------
+
+el('createQuizBtn').addEventListener('click', async ()=>{
+
+  const title = el('quiz_title').value.trim(); const class_id = el('quiz_class').value || null;
+
+  if(!title) return;
+
+  await apiJSON('/api/quizzes','POST',{title, class_id});
+
+  el('quiz_title').value=''; refreshQuizAdmin();
+
+});
+
+async function refreshQuizAdmin(){
+
+  const quizzes = await apiGet('/api/quizzes?published_only=false');
+
+  el('quizAdminList').innerHTML = quizzes.map(q=>`
+
+    <div class="card">
+
+      <strong>${q.title}</strong> ${q.published ? '✅ Published' : '⏸ Draft'}
+
+      <div style="margin-top:6px;display:flex;gap:8px;flex-wrap:wrap">
+
+        <button class="btn" onclick="openQuizEditor(${q.id}, '${q.title.replace(/'/g,"\\'")}')">Edit Questions</button>
+
+        <button class="btn btn-gold" onclick="togglePublish(${q.id}, ${q.published?0:1})">${q.published?'Unpublish':'Publish'}</button>
+
+        <button class="btn btn-danger" onclick="deleteQuiz(${q.id})">Delete</button>
+
+      </div>
+
+    </div>`).join('') || '<p>No tests yet.</p>';
+
+}
+
+window.togglePublish = async(id, val)=>{ await apiJSON('/api/quizzes/'+id+'/publish','POST',{published: !!val}); refreshQuizAdmin(); };
+
+window.deleteQuiz = async(id)=>{ await fetch('/api/quizzes/'+id,{method:'DELETE',credentials:'include'}); refreshQuizAdmin(); el('quizEditorWrap').style.display='none'; };
+
+window.openQuizEditor = async(id, title)=>{
+
+  currentQuizEditorId = id;
+
+  el('quizEditorWrap').style.display='block';
+
+  el('quizEditorTitle').textContent = 'Editing: '+title;
+
+  resetOptionsWrap();
+
+  await refreshQuestionAdmin();
+
+};
+
+function resetOptionsWrap(){
+
+  el('optionsWrap').innerHTML = '';
+
+  for(let i=0;i<4;i++) addOptionField();
+
+}
+
+function addOptionField(){
+
+  const wrap = el('optionsWrap');
+
+  const row = document.createElement('div'); row.className='form-row';
+
+  const input = document.createElement('input'); input.placeholder = 'Option '+(wrap.children.length+1); input.className='opt-field';
+
+  row.appendChild(input); wrap.appendChild(row);
+
+}
+
+el('addOptionBtn').addEventListener('click', addOptionField);
+
+el('addQuestionBtn').addEventListener('click', async ()=>{
+
+  if(!currentQuizEditorId) return;
+
+  const text = el('q_text').value.trim();
+
+  const options = Array.from(document.querySelectorAll('.opt-field')).map(i=>i.value.trim()).filter(Boolean);
+
+  const correctNum = parseInt(el('q_correct').value, 10);
+
+  if(!text || options.length<2 || !correctNum || correctNum<1 || correctNum>options.length){
+
+    return alert('Enter question text, at least 2 options, and a valid correct option number.');
+
+  }
+
+  await apiJSON('/api/quizzes/'+currentQuizEditorId+'/questions','POST',{question_text:text, options, correct_index: correctNum-1});
+
+  el('q_text').value=''; el('q_correct').value=''; resetOptionsWrap();
+
+  refreshQuestionAdmin();
+
+});
+
+async function refreshQuestionAdmin(){
+
+  const qs = await apiGet('/api/quizzes/'+currentQuizEditorId+'/questions/admin');
+
+  el('questionAdminList').innerHTML = qs.map((q,i)=>`
+
+    <div class="card"><strong>${i+1}. ${q.question_text}</strong>
+
+    <ul>${q.options.map((o,idx)=>`<li>${idx===q.correct_index?'✅':'—'} ${o}</li>`).join('')}</ul>
+
+    <button class="btn btn-danger" onclick="deleteQuestion(${q.id})">Delete</button></div>`).join('') || '<p>No questions yet.</p>';
+
+}
+
+window.deleteQuestion = async(id)=>{ await fetch('/api/questions/'+id,{method:'DELETE',credentials:'include'}); refreshQuestionAdmin(); };
+
+// ---------------- ADMIN: stories/educationists ----------------
+
+el('addStoryBtn').addEventListener('click', async ()=>{
+
+  const title = el('story_title').value.trim(); const content = el('story_content').value.trim();
+
+  const file = el('story_image').files[0];
+
+  if(!title||!content) return alert('Title and content required');
+
+  const fd = new FormData(); fd.append('title', title); fd.append('content', content);
+
+  if(file) fd.append('file', file);
+
+  await apiForm('/api/stories','POST',fd);
+
+  el('story_title').value=''; el('story_content').value=''; el('story_image').value='';
+
+  refreshStoriesAdmin();
+
+});
+
+async function refreshStoriesAdmin(){
+
+  const stories = await apiGet('/api/stories');
+
+  el('storiesAdminList').innerHTML = stories.map(s=>`<div class="card">${s.title} <button class="btn btn-danger" onclick="deleteStory(${s.id})">Delete</button></div>`).join('') || '<p>No stories yet.</p>';
+
+}
+
+window.deleteStory = async(id)=>{ await fetch('/api/stories/'+id,{method:'DELETE',credentials:'include'}); refreshStoriesAdmin(); };
+
+el('addEduBtn').addEventListener('click', async ()=>{
+
+  const name = el('edu_name').value.trim(); const quote = el('edu_quote').value.trim();
+
+  const file = el('edu_photo').files[0];
+
+  if(!name||!quote) return alert('Name and quote required');
+
+  const fd = new FormData(); fd.append('name', name); fd.append('quote', quote);
+
+  if(file) fd.append('file', file);
+
+  await apiForm('/api/educationists','POST',fd);
+
+  el('edu_name').value=''; el('edu_quote').value=''; el('edu_photo').value='';
+
+  refreshEduAdmin();
+
+});
+
+async function refreshEduAdmin(){
+
+  const edu = await apiGet('/api/educationists');
+
+  el('educationistsAdminList').innerHTML = edu.map(e=>`<div class="card">${e.name} <button class="btn btn-danger" onclick="deleteEdu(${e.id})">Delete</button></div>`).join('') || '<p>No entries yet.</p>';
+
+}
+
+window.deleteEdu = async(id)=>{ await fetch('/api/educationists/'+id,{method:'DELETE',credentials:'include'}); refreshEduAdmin(); };
+
+// ---------------- Init admin panel on login ----------------
+
+function initAdminPanel(){
+
+  fillSettingsForm();
+
+  refreshNavAdmin();
+
+  refreshAboutAdmin();
+
+  refreshClassesAdmin();
+
+  refreshResourceAdmin();
+
+  refreshVideoAdmin();
+
+  refreshQuizAdmin();
+
+  refreshStoriesAdmin();
+
+  refreshEduAdmin();
+
+}
+
+// ---------------- Boot ----------------
+
+(async function init(){
+
+  await loadSettings();
+
+  await loadNav();
+
+  await loadAbout();
+
+  const sess = await apiGet('/api/admin/session');
+
+  if(sess.is_admin){ STATE.isAdmin = true; el('adminPanel').classList.add('open'); initAdminPanel(); }
+
+})();
+
+</script>
+
+</body>
+
+</html>
